@@ -1,0 +1,174 @@
+:root {
+    --almost_white: hsl(0, 0%, 98%);
+    --medium_grey: hsl(0, 0%, 41%);
+    --almost_black: hsl(0, 0%, 8%);
+    --paragraph_font: 18px;
+    --mobile: 24em;
+    --desktop: 64em;
+}
+
+body,
+html {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: "Epilogue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--almost_white);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav {
+    width: 100%;
+    padding: 2rem 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_link {
+    width: 5%;
+}
+
+.logo_link img {}
+
+.main_nav {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.nav_links {
+    display: flex;
+    gap: 15%;
+    align-items: center;
+}
+
+.nav_links li {}
+
+.nav_links li p, .nav_links li a {
+    text-decoration: none;
+    color: var(--almost_black);
+}
+
+.nav_links li label {
+    position: relative;
+    display: flex;
+    gap: 6%;
+    align-items: center;
+}
+
+.nav_links li label input[type="checkbox"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.nav_links li label input[type="checkbox"]:checked ~ .menu {
+    display: flex;
+}
+
+.nav_links li label input[type="checkbox"]:checked ~ .arrowimg {
+    transform: rotate(180deg);
+    transition: transform 150ms ease-in-out;
+}
+
+.nav_links a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    padding: 1.3rem;
+    gap: 12px;
+    border-radius: 10px;
+    background-color: var(--almost_white);
+    box-shadow: 0 0 30px rgb(216, 206, 206);
+    width: auto;
+}
+
+.menu li {width: auto;}
+
+.menu li a {
+    display: flex;
+    gap: 12%;
+    width: auto;
+}
+
+.menu li a img {
+    
+}
+
+.menu li a p {
+}
+
+.main_nav > .logins {
+    width: 20%;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main_nav > .logins a {
+    text-decoration: none;
+    color: var(--almost_black);
+    /* margin-left: 2rem; */
+}
+
+.main_nav > .logins a:nth-child(2) {
+    padding: 0.7rem 8%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+main {
+    margin-top: 9rem;
+}
+
+.desktop {
+    width: 40%;
+    height: auto;
+}
+
+.mobile {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media(max-width: 64em) {
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        width: 100%;
+    }
+}
