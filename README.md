@@ -21,7 +21,7 @@ Users should be able to:
 
 - Live Site URL: https://ojayii.github.io/intro-section-with-dropdown-navigation/
 
-### Built with
+### Built with 
 
 - Semantic HTML5 markup
 - CSS
